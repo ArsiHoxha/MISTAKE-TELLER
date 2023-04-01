@@ -1,0 +1,110 @@
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✈✈🚩</title>
+    <style>
+      div {
+        width: 800px;
+        height: 400px;
+        background-color: rgb(44, 44, 44);
+        font-size: 50px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+
+      }
+      input {
+        height: 50px;
+        width: 800px;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>TYPING SPEED PROGRAM</h1></center>
+    <div></div>
+    <input type="text" />
+    <button>Submit</button>
+    <h2></h2>
+    <script>
+      const divi = document.querySelector("div");
+      const inputi = document.querySelector("input");
+      const butoni = document.querySelector("button");
+      const vendi_koha = document.querySelector("h2");
+      
+   
+       //ktu kemi tekstin e pare
+
+    
+
+async function TEDHENAT(){  
+let kerko = await  fetch('https://api.chucknorris.io/jokes/random')
+let merr = await kerko.json()
+teksti = merr['value']
+
+divi.innerText = teksti
+  fjala = divi.innerText
+       console.log(fjala)
+        newfjala = fjala.split("")
+        console.log(fjala)
+
+  butoni.addEventListener("click", () => {
+       
+
+       
+        //ktu kemi tekstin e dyte
+        
+        fjala2 =  inputi.value
+        console.log(fjala2)
+        
+
+
+        let lista1 = "ab"
+        let lista2 = "ac"
+        let count = 0;
+        const obj = fjala2.split("");
+        for(str of newfjala){
+            let idx = obj.findIndex(s => s === str);
+            if(idx >= 0){
+              count++;
+              obj.splice(idx, 1);
+    }
+    problemi = fjala.length - count
+    console.log(fjala.length -  count)
+    vendi_koha.innerHTML  = "Gabime " + problemi 
+  }
+
+
+      });
+    
+
+
+
+
+
+
+      }
+TEDHENAT()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
